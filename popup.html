@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Keyword Cleaner</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="toolbar">
+    <div class="left">
+      <h1>Keyword Cleaner</h1>
+      <p class="note">Deletes sync across Chrome if Sync is on.</p>
+    </div>
+    <div class="right">
+      <button id="openFull" title="Open full-page view">Open Full Page</button>
+    </div>
+  </header>
+
+  <section class="controls">
+    <input id="q" type="text" placeholder="keywords or host patterns (comma/space separated)" />
+    <div class="hints">
+      Examples: <code>facebook, tiktok</code> · host-only: <code>host:example.com</code> · wildcard: <code>host:*.example.com</code>
+    </div>
+    <div class="toggles">
+      <label><input type="checkbox" id="incHistory" checked> History</label>
+      <label><input type="checkbox" id="incBookmarks" checked> Bookmarks</label>
+    </div>
+    <div class="actions">
+      <button id="previewBtn">Preview</button>
+      <button id="deleteBtn" class="danger" disabled>Delete selected…</button>
+    </div>
+    <div id="status" class="status"></div>
+  </section>
+
+  <section id="results" class="results hidden">
+    <div class="section">
+      <div class="sectionHead sticky">
+        <h2>History <span id="hCount" class="count">(0)</span></h2>
+        <div class="sectionActions">
+          <label><input type="checkbox" id="hSelectAll"> Select all</label>
+        </div>
+      </div>
+      <ul id="hList" class="list"></ul>
+    </div>
+
+    <div class="section">
+      <div class="sectionHead sticky">
+        <h2>Bookmarks <span id="bCount" class="count">(0)</span></h2>
+        <div class="sectionActions">
+          <label><input type="checkbox" id="bSelectAll"> Select all</label>
+        </div>
+      </div>
+      <ul id="bList" class="list"></ul>
+    </div>
+  </section>
+
+  <script src="shared.js"></script>
+  <script src="popup.js"></script>
+
+    <footer class="footer">
+    <a href="https://hnetechnologies.com" target="_blank" rel="noopener noreferrer">by hnetechnologies</a>
+  </footer>
+
+</body>
+</html>

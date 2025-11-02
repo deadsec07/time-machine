@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Time Machine - History & Bookmarks Cleaner by Keywords",
+  "version": "1.1.1",
+  "description": "Delete Chrome history and bookmarks by keywords or host patterns. Preview first, then delete selected.",
+  "permissions": ["history", "bookmarks", "storage"],
+  "action": { "default_popup": "popup.html" },
+  "icons": {
+  "16": "icons/icon16.png",
+  "32": "icons/icon32.png",
+  "48": "icons/icon48.png",
+  "128": "icons/icon128.png"
+}
+}

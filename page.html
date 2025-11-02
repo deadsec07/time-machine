@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Keyword Cleaner — Full Page</title>
+  <link rel="stylesheet" href="page.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Keyword Cleaner — Full Page</h1>
+    <!-- removed the Open Popup button -->
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <input id="q" type="text" placeholder="keywords or host patterns (comma/space separated)" />
+      <div class="hints">
+        Examples: <code>facebook, tiktok</code> · host-only: <code>host:example.com</code> · wildcard: <code>host:*.example.com</code>
+      </div>
+      <div class="toggles">
+        <label><input type="checkbox" id="incHistory" checked> History</label>
+        <label><input type="checkbox" id="incBookmarks" checked> Bookmarks</label>
+      </div>
+      <div class="actions">
+        <button id="previewBtn">Preview</button>
+        <button id="deleteBtn" class="danger" disabled>Delete selected…</button>
+      </div>
+      <div id="status" class="status"></div>
+    </section>
+
+    <section id="results" class="results hidden">
+      <div class="section">
+        <div class="sectionHead sticky">
+          <h2>History <span id="hCount" class="count">(0)</span></h2>
+          <div class="sectionActions">
+            <label><input type="checkbox" id="hSelectAll"> Select all</label>
+          </div>
+        </div>
+        <ul id="hList" class="list"></ul>
+      </div>
+
+      <div class="section">
+        <div class="sectionHead sticky">
+          <h2>Bookmarks <span id="bCount" class="count">(0)</span></h2>
+          <div class="sectionActions">
+            <label><input type="checkbox" id="bSelectAll"> Select all</label>
+          </div>
+        </div>
+        <ul id="bList" class="list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="shared.js"></script>
+  <script src="page.js"></script>
+   <footer class="footer">
+    <a href="https://hnetechnologies.com" target="_blank" rel="noopener noreferrer">by hnetechnologies</a>
+  </footer>
+</body>
+</html>
